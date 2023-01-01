@@ -1,0 +1,42 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "MessageDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Mesaj Detayları Sayfası</h4>
+            <form class="forms-sample" method="post">
+                @Html.HiddenFor(x=>x.ContactID)
+                <div class="form-group">
+                    <label for="exampleInputName1">Adı Soyadı</label>
+                    <input asp-for="Name" type="text" class="form-control">
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="exampleInputName1">Mail Adresi</label>
+                    <input asp-for="Name" type="text" class="form-control">
+                </div>
+                <br />
+                 <div class="form-group">
+                    <label for="exampleInputName1">Tarih</label>
+                    <input asp-for="Date" type="text" class="form-control">
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="exampleInputName1">Mesaj detayı</label>
+                    <textarea class="form-control" cols="5" rows="20" asp-for="Message"></textarea>    
+                </div>
+                <br />
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
